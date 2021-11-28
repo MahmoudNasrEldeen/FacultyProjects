@@ -1,0 +1,31 @@
+- Problem Overview ...?
+Predict the rate of the product in Apple Store which is
+high, intermediate or low
+
+- Dataset ...?
+about 4798 Record data(2800) have (12)features as:
+id, track_name, size_bytes, currency, price, rating_count_tot,
+rating_count_ver, vpp_lic, ver, cont_rating, prime_genre,
+sup_devices.num, ipadSc_urls.num, lang.num
+and the output variable is the rate of track
+
+- Preprocessing ...?
+1- Read the data
+2- Fix Nan Values
+   - Remove Records that have 8 Empty Values
+   - Get Categorical and Numerical Features from dataset
+   - in Categorical Feat replace null values with mod value
+   - in Numerical Feat Replace null values with mean
+3- Convert Categorical Features To Numerical Features using LabelEncoder()
+4- Make Dummy Variables using OneHotEncoder()
+5- Feature Selection based on 0.02 Percentage
+6- Making Comparison before and after feature selection
+   To make sure that feature selected is trustful
+7- Split data into training and testing
+8- Feature Scaling using StanderScaler()
+
+- Training and Testing ...?
+train the problems using 3 different Classification algorithms like
+SVM(Support Vector Machine), RFC(Random Forest Classifier) and
+KNN(K Nearest Neighbor) then pickle the model in file then
+in testing load the model to re-run for new data
